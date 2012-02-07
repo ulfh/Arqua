@@ -1,0 +1,45 @@
+.TH ARQUA 1
+.SH NAME
+arqua \- generate an architectural quality report for a GCC project
+.SH SYNOPSIS
+.B arqua
+.B [-functions]
+.B [-root root_path]
+.B [-start
+.I start_level
+.B ]
+.B [-stop
+.I stop_level
+.B ]
+.B [-pct
+.I package_complexity_threshold
+.B ]
+.B [-fct
+.I function_complexity_threshold
+.B ]
+.B [-report
+.I report_type
+.B ]
+<rtl_file>...
+.SH DESCRIPTION
+.B arqua
+uses GCC's intermediate RTL format to analyse the structure
+of a program and generate an architectural quality report.
+The report can be either a text list of 'smells', or a graph
+in the Graphviz DOT language.
+.SH ARCHITECTURAL QUALITY
+Arqua analyzes
+Arqua specifies two types of 'smells'; complexity smells, and tangle smells.
+Tangle smells are simply circular dependencies between 
+.SH OPTIONS
+.IP -functions
+.IP "-root root_path"
+.IP "-start start_level"
+.IP "-stop stop_level"
+.IP "-pct package_complexity_threshold"
+.IP "-fct function_complexity_threshold"
+.IP "-report report_type"
+.SH AUTHOR
+Magnus Ernstsson
+.SH SEE ALSO
+gcc(1), egypt(1), dotty(1), dot(1), neato(1)
