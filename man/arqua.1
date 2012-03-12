@@ -26,11 +26,12 @@ arqua \- generate an architectural quality report for a GCC project
 uses GCC's intermediate RTL format to analyse the structure
 of a program and generate an architectural quality report.
 The report can be either a text list of 'smells', or a graph
-in the Graphviz DOT language.
+in the Graphviz DOT language. Arqua is based on the ideas from the call graph
+tool egypt.
 .SH ARCHITECTURAL QUALITY
-Arqua analyzes
 Arqua specifies two types of 'smells'; complexity smells, and tangle smells.
-Tangle smells are simply circular dependencies between 
+Tangle smells are simply circular dependencies between functions or packages
+(files or folders).
 .SH OPTIONS
 .IP -functions
 .IP "-root root_path"
